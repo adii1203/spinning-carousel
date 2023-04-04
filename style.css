@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-color: #FFE2C0;
+    display: grid;
+    place-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.circle{
+    width: 700px;
+    height: 700px;
+    border-radius: 50%;
+    position: relative;
+    transform: translate(0, 500px);
+}
+
+img{
+    width: 240px;
+    height: 380px;
+    border-radius: 85px;
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    transition: transform 500ms ease-out;
+}
+
+
+img:nth-of-type(1){
+    display: none;
+    transform: translate(calc(cos(0deg) * 600px), calc(sin(0deg) * 600px) ) rotate(0deg) /*90*/
+}
+img:nth-of-type(2){
+    transform: translate(calc(cos(270deg) * 600px), calc(sin(270deg) * 600px)) rotate(0deg) /*140*/
+}
+img:nth-of-type(3){
+    transform: translate(calc(cos(270deg) * 600px), calc(sin(270deg) * 600px)) rotate(0deg) /*180*/
+}
+img:nth-of-type(4){
+    transform: translate(calc(cos(270deg) * 600px), calc(sin(270deg) * 600px)) rotate(0deg) /*220*/
+}
+img:nth-of-type(5){
+    transform: translate(calc(cos(270deg) * 600px), calc(sin(270deg) * 600px)) rotate(10deg) /*270*/
+}
+img:nth-of-type(6){
+    transform: translate(calc(cos(270deg) * 600px), calc(sin(270deg) * 600px)) rotate(-10deg) /*-40*/
+}
+img:nth-of-type(7){
+    transform: translate(calc(cos(270deg) * 600px), calc(sin(270deg) * 600px)) /*0*/
+}
+img:nth-of-type(8){
+    transform: translateX(calc(cos(270deg) * 600px)) translateY( calc(sin(270deg) * 600px)) rotate(0deg) /*40*/
+} 
+
+.index{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+    gap: 1.5rem;
+    opacity: 0;
+    transform: translateY(-400px);
+}
+
+.index span{
+    
+ display: inline-block;
+ width: 14px;
+ height: 14px;
+ border-radius: 50%;
+ background-color: #000;
+ cursor: pointer;
+ opacity: .4;
+}
+
+span.active{
+    background-color: #000;
+    opacity: 1;
+}
+
+.button{
+    position: absolute;
+    left: 19rem;
+    top: 2rem;
+    background-color: #7000ff;
+    color: #fff;
+    outline: none;
+    border: none;
+    padding: .7rem 2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+/*  */
